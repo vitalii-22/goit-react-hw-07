@@ -5,8 +5,11 @@
 }
 
 .contactItem {
+  box-sizing: border-box;
+  width: 100%;
+  width: calc((100% - 20px) / 4);
   background: #f1ebeb;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   display: flex;
   gap: 20px;

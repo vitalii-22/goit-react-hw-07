@@ -1,11 +1,11 @@
-const ErrorMessage = ({ message = '' }) => {
-  return (
-    <p>
-      {message.length > 0
-        ? message
-        : 'Whoops, something went wrong! Please try reloading this page!'}
-    </p>
-  );
+import { useSelector } from 'react-redux';
+import { selectError } from '../../redux/contactsSlice';
+
+const ErrorMessage = () => {
+  const errorMessage = useSelector(selectError);
+  console.log(errorMessage);
+
+  return <p>{errorMessage}</p>;
 };
 
 export default ErrorMessage;
